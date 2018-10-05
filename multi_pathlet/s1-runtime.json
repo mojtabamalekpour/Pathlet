@@ -1,0 +1,18 @@
+{
+  "target": "bmv2",
+  "p4info": "build/source_routing.p4info",
+  "bmv2_json": "build/source_routing.json",
+  "table_entries": [
+    {
+      "table": "MyIngress.flowlet_table",
+      "match": {
+        "hdr.pathLets[0].item": [100]
+      },
+      "action_name": "MyIngress.pathlet_to_port2",
+      "action_params": {
+        "items2": 2,
+        "items3": 3
+      }
+    }
+  ]
+} 
